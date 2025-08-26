@@ -48,6 +48,7 @@ print("===================================================================")
 tipoCliente=str(input("Que tipo de Cliente sos: (Residencial, Comercial o Industrial) "))
 consumo=int(input("Ingresar Cantidad de mts³ consumidos: "))
 tarifaBase=7000
+tarifatotal=(tarifaBase + consumo*200)
 bonificacion=0
 recargo=0
 #El costo por metro cúbico (m³) de agua es de $200/m³.
@@ -56,6 +57,9 @@ if tipoCliente=="Residencial":
         bonificacion=10
     elif consumo>80:
         recargo=15
+if tipoCliente=="Residencial":
+    if tarifatotal<35000:
+        bonificacion+=5
 elif tipoCliente=="Comercial":
     if consumo>300:
         bonificacion=12
@@ -63,9 +67,6 @@ elif tipoCliente=="Comercial":
         bonificacion=8
     elif consumo<50:
         recargo=5
-    else:
-        bonificacion=0
-        recargo=0
 elif tipoCliente=="Industrial":
     if consumo>1000:
         bonificacion=30
@@ -73,19 +74,14 @@ elif tipoCliente=="Industrial":
         bonificacion=20
     elif consumo<200:
         recargo=10
-    else:
-        recargo=0
-        bonificacion=0
-tarifatotal=(tarifaBase + consumo*200)
 aplicacionBonif=(tarifatotal*bonificacion/100)
 aplicacionRecargo=(tarifatotal*recargo/100)
 total=(tarifatotal - aplicacionBonif + aplicacionRecargo)
 iva=total * 21/100
-print("Su Factura es de: ")
 print(f"Subtotal del consumo: {tarifatotal}")
 print(f"Bonificacion: {bonificacion}")
 print(f"Recargos: {recargo}")
 print(f"Subtotal con Recargos o Bonif: {tarifatotal - aplicacionBonif + aplicacionRecargo}")
 print(f"IVA Aplicado del 21%")
 print(f"Total: {total + iva} ")
-
+print(f"===================================================================")
