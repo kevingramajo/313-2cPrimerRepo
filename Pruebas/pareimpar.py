@@ -54,12 +54,24 @@
 ## Ejemplo de uso
 #print(generar_primos(20))  # [2, 3, 5, 7, 11, 13, 17, 19]
 
-print("============================================================================")
-print("Fibonacci")
-def fibonacci_generator(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
+#print("============================================================================")
+#print("Fibonacci")
+#def fibonacci_generator(n):
+    #a, b = 0, 1
+    #for _ in range(n):
+        #yield a
+        #a, b = b, a + b
+#
+#print(list(fibonacci_generator(10)))  # Genera los primeros 10 números de Fibonacci
 
-print(list(fibonacci_generator(10)))  # Genera los primeros 10 números de Fibonacci
+def factorial(n):
+    # Caso base: el factorial de 0 o 1 es 1
+    if n == 0 or n == 1:
+        return 1
+    # Caso recursivo: n * factorial(n-1)
+    else:
+        return n * factorial(n - 1)
+
+# Ejemplo de uso
+numero = 5
+print(f"El factorial de {numero} es: {factorial(numero)}")
