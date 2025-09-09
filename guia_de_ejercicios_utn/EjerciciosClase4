@@ -1,0 +1,42 @@
+#""" Conversor de monedas
+#
+#Escribir un programa que pida al usuario un monto en dólares y lo convierta a pesos argentinos y a euros. Usar funciones para cada conversión y mostrar el resultado con dos decimales. """
+#
+#
+#def dolares_a_pesos(dolares: int, tasa_cambio=1400) -> float:
+    #return dolares * tasa_cambio
+#    
+#
+#def dolares_a_euros(dolares: int, tasa_cambio=0.85) -> float:
+    #return dolares * tasa_cambio
+#    
+#
+#monto_dolares = float(input("Ingrese monto en dolares a covertir: "))
+#monto_pesos = dolares_a_pesos (monto_dolares)
+#monto_euros = dolares_a_euros  (monto_dolares)
+#
+#
+#print("#Conversor de divisas")
+#print(f"Su monto en pesos argentinos es: ${monto_pesos:.2f}")
+#print(f"Su monto en euros es: €{monto_euros:.2f}")
+
+"""
+Control de versiones simulado
+Crear un programa que simule algunos comandos básicos de Git:
+init → iniciar repositorio
+add <archivo> → agregar archivo
+commit <mensaje> → guardar cambios
+status → mostrar estado actual.
+Usar un diccionario para guardar el estado de los archivos y funciones para cada comando.
+"""
+
+#Diccionario
+repositorio={Inicializador=False, Archivos={}, commit=[]}
+def Init():
+    "Inicializador"=True
+    print("Repositor Iniciado")
+
+def Add():
+    if Inicializador=False:
+        print("No se Inicializo ningun Repositorio")
+    else:

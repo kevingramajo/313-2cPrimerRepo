@@ -23,13 +23,13 @@ def main():
                 sys.exit()
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
-            character.move (-5,0)
+            character.move (-5,0, world)
         if keys[pygame.K_RIGHT]:
-            character.move(5,0)
+            character.move(5,0, world)
         if keys[pygame.K_UP]:
-            character.move(0,-5)
+            character.move(0,-5, world)
         if keys[pygame.K_DOWN]:
-            character.move(0,5)
+            character.move(0,5, world)
 
         world.draw(screen)
         character.draw(screen)

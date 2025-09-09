@@ -32,7 +32,7 @@
     #numero += 2
 
 #print(f"=============================================")
-#print(f"Solicitar el ingreso de 5 números, calcular la suma de los números ingresados y el promedio. Mostrar la suma y el promedio por pantalla")
+#print(f"5-Solicitar el ingreso de 5 números, calcular la suma de los números ingresados y el promedio. Mostrar la suma y el promedio por pantalla")
 #a=int(input("Ingresar un Numoro A: "))
 #b=int(input("Ingresar un Numero B: "))
 #c=int(input("Ingresar un Numero C: "))
@@ -42,20 +42,57 @@
 #print(f"La suma de los numeros ingresados es de: {a} + {b} + {c} + {d} + {e} ")
 #print(f"Su promedio es de: {promedio}")
 
+#print(f"=============================================")
+#print(f"6-Solicitar al usuario que ingrese números (hasta que no quiera ingresar más). Calcular la suma de los números ingresados y el promedio de los mismos.")
+#suma=0
+#contador=0
+#
+#while True:
+    #numero=int(input("Ingrese un Numero "))
+    #suma +=numero
+    #contador +=1
+#
+    #continuar=input("Quiere continuar agregando Numeros [SI] S/N [NO]?")
+    #if continuar == "n":
+        #break
+#promedio= (suma/contador)
+#if contador >0:
+    #print(f"La suma de los numeros ingresados es de: {suma} ")
+    #print(f"Su promedio es de: {promedio}")
+
+#print(f"=============================================")
+#print(f"7-Solicitar al usuario que ingrese números (hasta que no quiera ingresar más). Calcular la suma de los números positivos y el producto de los negativos")
+#suma=0
+#negativos=0
+#contador=0
+#
+#while True:
+    #numero=int(input("Ingrese un Numero: "))
+    #if numero>=0:
+        #suma +=numero
+        #contador +=1
+    #else:
+        #negativos +=numero
+        #contador +=1
+#
+    #continuar=input("Quiere continuar agregando Numeros [SI] S/N [NO]?")
+    #if continuar == "n":
+        #break
+#print(f"La suma de sus numeros Positivos es: {suma}")
+#print(f"El producto de sus numeros Negativos es: {negativos}")
+
 print(f"=============================================")
-print(f"Solicitar al usuario que ingrese números (hasta que no quiera ingresar más). Calcular la suma de los números ingresados y el promedio de los mismos.")
-suma=0
+print(f"8-Ingresar 10 números enteros. Determinar el máximo y el mínimo.")
 contador=0
-
+#Revisar como hacer una lista junto con el input
 while True:
-    numero=int(input("Ingrese un Numero "))
-    suma +=numero
+    numero=float(input("Ingrese un Numero: "))
+    lista=[float(numero)]
     contador +=1
-
-    continuar=input("Quiere continuar agregando Numeros [SI] S/N [NO]?")
-    if continuar == "n":
+    numero += lista
+    if contador == 10:
         break
-promedio= (suma/contador)
-if contador >0:
-    print(f"La suma de los numeros ingresados es de: {suma} ")
-    print(f"Su promedio es de: {promedio}")
+
+maximo= max(numero)
+minimo= min(numero)
+print(f"Maximo: {maximo}, Minimo: {minimo}")

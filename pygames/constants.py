@@ -1,5 +1,9 @@
 #Tamanos
 WIDHT, HEIGHT= 800, 600
+PLAYER = 60
+GRASS = 64
+TREE = 40
+SMALL_STONE= 50
 
 #Colores
 WHITE= (255, 255, 255)
